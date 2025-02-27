@@ -1,15 +1,15 @@
 document.getElementById('cashout-btn').addEventListener('click', function(event){
     event.preventDefault();
     const ammount = getInputValueByID('chasout-ammount');
-    const pin = getInputValueByID('chasout-pin');
-    const account = getInputValueByID('account-number');
+    let pin = getInputValueByID('chasout-pin');
+    const account = document.getElementById('account-number').value;
     pin = parseInt(pin);
 
     let balance = document.getElementById('Balance').innerText;
     balance = parseFloat(balance);
 
     
-    if(account.lenght===11){
+    if(account.length===11.0){
         if(ammount && pin == 1234){
             const newBalance = balance - ammount;
             console.log(newBalance);
