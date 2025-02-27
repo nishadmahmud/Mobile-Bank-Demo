@@ -47,7 +47,7 @@
                         <img src="assets/purse1.png" class="w-6">
                         <h3 class="text-[#080808B2] text-[14px]">Pay Bill</h3>
                     </div>
-                    <div class="box border rounded-lg border-gray-300 gap-2 flex flex-col justify-center items-center py-6 px-6">
+                    <div id="transactions" class="box border rounded-lg border-gray-300 gap-2 flex flex-col justify-center items-center py-6 px-6">
                         <img src="assets/transaction1.png" class="w-6">
                         <h3 class="text-[#080808B2] text-[14px]">Transactions</h3>
                     </div>
@@ -62,7 +62,7 @@
                           <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                             <form class="card-body">
                                 <legend>Select Bank</legend>
-                                <select class="select w-full max-w-xs">
+                                <select id="allBank" class="select w-full max-w-xs">
                                     <option disabled selected>Pick your Bank</option>
                                     <option value="Bkash">Bkash</option>
                                     <option value="Nagad">Nagad</option>
@@ -130,7 +130,12 @@
                       </div>
                 </section>
 
-                
+                <section id="transaction" class="px-6">
+                    <h2 class="mb-4 text-lg font-semibold">Transaction History</h2>
+                    <div id="transaction-container" class="p-3 rounded-md gap-3 bg-slate-300 border border-gray-800">
+
+                    </div>
+                </section>
             </section>
 
             
