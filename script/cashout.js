@@ -1,22 +1,23 @@
-document.getElementById('add-btn').addEventListener('click', function(event){
+document.getElementById('cashout-btn').addEventListener('click', function(event){
     event.preventDefault();
-    const ammount = getInputValueByID('ammount');
+    const ammount = getInputValueByID('chasout-ammount');
+    const pin = getInputValueByID('chasout-pin');
     const account = getInputValueByID('account-number');
-    const pin = getInputValueByID('pin');
+    pin = parseInt(pin);
 
     let balance = document.getElementById('Balance').innerText;
     balance = parseFloat(balance);
 
-
-    if(account.lenght===1){
+    
+    if(account.lenght===11){
         if(ammount && pin == 1234){
-            const newBalance = ammount + balance;
+            const newBalance = balance - ammount;
             console.log(newBalance);
             document.getElementById('Balance').innerText = newBalance;
         }
         else alert('Wrong PIN');
     }
-    else alert('Wrong Account Number');
+    else alert("Account number is not right")
     
         
 });
